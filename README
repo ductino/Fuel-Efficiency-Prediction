@@ -1,0 +1,166 @@
+#  Dự đoán Mức Tiêu Thụ Nhiên Liệu Ô Tô bằng Hồi Quy Tuyến Tính
+
+##  Giới thiệu
+
+Đây là dự án Machine Learning nhằm dự đoán mức tiêu thụ nhiên liệu của ô tô (MPG - Miles Per Gallon) dựa trên các đặc điểm kỹ thuật của xe.
+
+Dự án được thực hiện theo quy trình Machine Learning hoàn chỉnh, bao gồm:
+
+- Khám phá dữ liệu (EDA)
+- Tiền xử lý dữ liệu
+- Feature Engineering
+- Xây dựng mô hình hồi quy tuyến tính
+- Đánh giá mô hình
+- Phân tích kết quả
+
+---
+
+#  Mục tiêu
+
+- Hiểu cấu trúc bộ dữ liệu.
+- Làm sạch và tiền xử lý dữ liệu.
+- Tạo các đặc trưng mới (Feature Engineering).
+- Xây dựng mô hình Multiple Linear Regression.
+- Đánh giá hiệu quả mô hình.
+- Phân tích các giả định của mô hình hồi quy.
+
+---
+#  Bộ dữ liệu
+
+Bộ dữ liệu gồm các thông tin của xe như:
+
+- Số xi lanh (Cylinders)
+- Dung tích động cơ (Displacement)
+- Công suất (Horsepower)
+- Khối lượng xe (Weight)
+- Gia tốc (Acceleration)
+- Năm sản xuất (Model Year)
+- Quốc gia sản xuất (Origin)
+
+Biến mục tiêu:
+
+- MPG (Miles Per Gallon)
+
+---
+
+#  Công nghệ sử dụng
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Statsmodels
+- Scikit-learn
+
+---
+
+#  Quy trình thực hiện
+
+## 1. Khám phá dữ liệu (EDA)
+
+- Kiểm tra dữ liệu
+- Thống kê mô tả
+- Kiểm tra dữ liệu thiếu
+- Phân tích tương quan
+- Trực quan hóa dữ liệu
+
+---
+
+## 2. Tiền xử lý dữ liệu
+
+- Xử lý giá trị thiếu
+- Chuẩn hóa dữ liệu
+- Mã hóa biến phân loại
+- Phát hiện và xử lý ngoại lệ (Outlier)
+
+---
+
+## 3. Feature Engineering
+
+Tạo thêm các đặc trưng mới nhằm cải thiện khả năng dự đoán:
+
+- Weight per Cylinder
+- Horsepower to Weight Ratio
+- Engine Size per Cylinder
+- Car Age
+
+Các đặc trưng này giúp mô hình phản ánh tốt hơn mối quan hệ giữa đặc điểm kỹ thuật của xe và mức tiêu thụ nhiên liệu.
+
+---
+
+## 4. Xây dựng mô hình
+
+Sử dụng Multiple Linear Regression với thư viện **Statsmodels**.
+
+Các biến được lựa chọn sau quá trình phân tích gồm:
+
+- Acceleration
+- HP to Weight Ratio
+- Engine Size per Cylinder
+- Weight per Cylinder
+- Car Age
+- Origin (Japan, Europe, USA)
+
+---
+
+## 5. Đánh giá mô hình
+
+Mô hình được đánh giá bằng các chỉ số:
+
+- R² Score
+- Adjusted R²
+- MAE
+- MSE
+- RMSE
+
+Ngoài ra còn thực hiện:
+
+- Phân tích phần dư (Residual Analysis)
+- QQ Plot
+- Residual vs Predicted
+- Kiểm tra đa cộng tuyến (VIF)
+
+---
+
+#  Kết quả
+
+- Hoàn thành quy trình Machine Learning từ tiền xử lý đến đánh giá mô hình.
+- Feature Engineering giúp cải thiện khả năng dự đoán của mô hình.
+- Các giả định của mô hình hồi quy được kiểm tra thông qua Residual Analysis và QQ Plot.
+- Mô hình đạt kết quả phù hợp trên bộ dữ liệu sau khi xử lý.
+
+---
+
+#  Cấu trúc thư mục
+
+```
+FuelEfficiencyPrediction/
+│
+├── data/
+│   └── auto_mpg.csv
+│
+├── notebook/
+│   └── FuelEfficiencyPrediction.ipynb
+│
+├── README.md
+```
+
+---
+
+# hướng phát triển
+
+Trong tương lai, dự án có thể được mở rộng bằng cách:
+
+- So sánh với các mô hình khác như Decision Tree, Random Forest.
+- Áp dụng Cross Validation.
+- Tối ưu tham số mô hình.
+- Triển khai thành ứng dụng web bằng FastAPI.
+
+---
+
+
+**Phạm Văn Đức**
+
+- Sinh viên Công nghệ Thông tin
+- Định hướng Machine Learning và AI Engineer
